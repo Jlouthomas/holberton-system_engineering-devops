@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
-# Set a counter to 0 ; WHILE less than 10, echo "Best School" and increment counter by 1 - this version adds an if statement to also echo "Hi" on the ninth iteration
-i="0"
-while  [ "$i" -lt "10" ]
-do
-    ((i++))
-    if [ "$i" -eq "4" ]
+# This script is displays luck messages for numbers or "Holberton School"
+counter=1
+while [ $counter -lt 11 ]; do
+    if [ $counter -eq 4 ]
     then
 	echo "bad luck"
-    elif [ "$i" -eq "8" ]
+    elif [ $counter -eq 8 ]
     then
 	echo "good luck"
     else
-	echo "Best School"
+	echo "Holberton School"
     fi
-    done
+    let counter=counter+1
+done  
